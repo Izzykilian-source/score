@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Test Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #4cafc9, #8e44ad);
+    }
+    .card-shadow {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-blue-50">
+  <header class="bg-teal-600 bg-opacity-90 text-white shadow-md py-6 sticky top-0 z-20">
+    <div class="container mx-auto flex items-center justify-between px-6">
+      <!-- Logo -->
+      <div class="flex items-center space-x-4">
+        <img src="https://via.placeholder.com/50" alt="Logo" class="h-10 w-10 rounded-full">
+        <div>
+          <h1 class="text-xl font-bold">Mock Test Report</h1>
+          <p class="text-sm">Visualize Your Academic Growth</p>
+        </div>
+      </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-8">
+      <a href="#performance" class="text-white hover:text-yellow-300 transition duration-300">Performance</a>
+      <a href="#score-report" class="text-white hover:text-yellow-300 transition duration-300">Score Report</a>
+      <a href="#topic-breakdown" class="text-white hover:text-yellow-300 transition duration-300">Topic Breakdown</a>
+    </nav>
+
+    <!-- Student Info -->
+    <div class="flex items-center space-x-4">
+      <img src="img/man.png" alt="Student Photo" class="h-10 w-10 rounded-full border-2 border-white shadow-md">
+      <div>
+        <h2 class="text-sm font-semibold">John Doe</h2>
+        <p class="text-xs text-yellow-300">Grade 10th</p>
+      </div>
+    </div>
+
+  
+    <!-- Mobile Menu Button -->
+    <button id="menuButton" class="md:hidden text-white hover:text-yellow-300 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+</header>
+<!-- Mobile Navigation -->
+<div id="mobileMenu" class="hidden bg-teal-700 shadow-md mt-4 md:hidden">
+  <a href="#performance" class="block px-6 py-3 text-white hover:bg-teal-600 transition duration-300">Performance</a>
+  <a href="#score-report" class="block px-6 py-3 text-white hover:bg-teal-600 transition duration-300">Score Report</a>
+  <a href="#topic-breakdown" class="block px-6 py-3 text-white hover:bg-teal-600 transition duration-300">Topic Breakdown</a>
+</div>
+</header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 p-4">
+      <!-- Performance Section -->
+      <section id="performance" class="bg-white shadow-md rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-semibold text-teal-600">Performance Overview</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
+          <!-- Overall Score -->
+          <div class="bg-gray-50 rounded-lg p-6 card-shadow">
+            <h3 class="text-lg font-semibold text-teal-600">Overall Score</h3>
+            <p class="text-gray-500 mt-2">Top 10% in the academy</p>
+            <div class="text-center mt-4">
+              <span class="text-4xl font-bold text-teal-700">1120</span>
+              <p class="text-sm text-gray-500">Higher than 94% of students</p>
+            </div>
+            <!-- New Content -->
+            <div class="mt-6">
+              <h4 class="text-teal-600 font-semibold text-sm">Achievements</h4>
+              <ul class="mt-2 space-y-2">
+                <li class="flex items-center">
+                  <span class="bg-teal-200 text-teal-700 px-2 py-1 rounded-full text-xs font-medium">Top Scorer</span>
+                  <p class="ml-3 text-gray-500 text-sm">Achieved highest score this month</p>
+                </li>
+                <li class="flex items-center">
+                  <span class="bg-teal-200 text-teal-700 px-2 py-1 rounded-full text-xs font-medium">Consistency</span>
+                  <p class="ml-3 text-gray-500 text-sm">Maintained above 80% accuracy</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+      
+
+           <!-- Performance Overtime Graph -->
+    <div class="bg-gray-50 rounded-lg p-6 card-shadow">
+      <h3 class="text-lg font-semibold text-teal-600">Performance Overtime</h3>
+      <canvas id="performanceChart" class="mt-4"></canvas>
+    </div>
+  </div>
+
+  <!-- Additional Content -->
+  <div class="bg-gray-50 rounded-lg p-6 card-shadow mt-8">
+    <h4 class="text-teal-600 font-semibold">Motivational Quote</h4>
+    <p class="mt-2 text-gray-500 italic">"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing." - Pele</p>
+  </div>
+</section>
+    
+     <!-- Feedback Section -->
+     <section class="bg-white bg-opacity-90 shadow-md rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-semibold text-teal-700">Feedback</h2>
+      <p class="text-gray-600 mt-2">Great job! Keep improving your accuracy in Mathematics and Science.</p>
+      <ul class="list-disc ml-6 mt-4 text-gray-600">
+        <li>Focus on improving reading speed in the Reading section.</li>
+        <li>Practice time management for the Mathematics section.</li>
+      </ul>
+    </section>
+
+    <!-- Score Report Section -->
+    <section id="score-report" class="bg-white shadow-md rounded-lg p-6 mb-8">
+      <h2 class="text-2xl font-semibold text-teal-600">Score Report</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div class="bg-gray-50 rounded-lg p-6 card-shadow">
+          <h3 class="text-lg font-semibold text-teal-600">Reading & Writing</h3>
+          <p class="text-gray-500 mt-2">Accuracy: <strong>81.48%</strong></p>
+          <progress class="w-full h-3 mt-4 bg-gray-200" value="81" max="100"></progress>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 card-shadow">
+          <h3 class="text-lg font-semibold text-teal-600">Mathematics</h3>
+          <p class="text-gray-500 mt-2">Accuracy: <strong>80%</strong></p>
+          <progress class="w-full h-3 mt-4 bg-gray-200" value="80" max="100"></progress>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 card-shadow">
+          <h3 class="text-lg font-semibold text-teal-600">Science</h3>
+          <p class="text-gray-500 mt-2">Accuracy: <strong>85%</strong></p>
+          <progress class="w-full h-3 mt-4 bg-gray-200" value="85" max="100"></progress>
+        </div>
+      </div>
+    </section>
+
+     <!-- Topic Breakdown Section -->
+     <section id="topic-breakdown" class="bg-white shadow-md rounded-lg p-6 mt-8">
+      <h2 class="text-2xl font-semibold text-teal-600">Topic Breakdown</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-blue-600">Grammar</h3>
+          <p class="text-sm text-gray-500">Total Questions: <strong>20</strong></p>
+          <p class="text-sm text-gray-500">Correct: <strong>18</strong></p>
+          <p class="text-sm text-gray-500">Accuracy: <strong>90%</strong></p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-blue-600">Algebra</h3>
+          <p class="text-sm text-gray-500">Total Questions: <strong>15</strong></p>
+          <p class="text-sm text-gray-500">Correct: <strong>12</strong></p>
+          <p class="text-sm text-gray-500">Accuracy: <strong>80%</strong></p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-blue-600">Physics</h3>
+          <p class="text-sm text-gray-500">Total Questions: <strong>30</strong></p>
+          <p class="text-sm text-gray-500">Correct: <strong>24</strong></p>
+          <p class="text-sm text-gray-500">Accuracy: <strong>80%</strong></p>
+        </div>
+        <!-- New Topic -->
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-blue-600">Geometry</h3>
+          <p class="text-sm text-gray-500">Total Questions: <strong>25</strong></p>
+          <p class="text-sm text-gray-500">Correct: <strong>22</strong></p>
+          <p class="text-sm text-gray-500">Accuracy: <strong>88%</strong></p>
+        </div>
+        <!-- Another New Topic -->
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+          <h3 class="text-lg font-semibold text-blue-600">Chemistry</h3>
+          <p class="text-sm text-gray-500">Total Questions: <strong>20</strong></p>
+          <p class="text-sm text-gray-500">Correct: <strong>17</strong></p>
+          <p class="text-sm text-gray-500">Accuracy: <strong>85%</strong></p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="bg-teal-700 text-white py-4 text-center">
+    <p>&copy; 2025 Mock Test Report. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Performance Overtime Chart
+    const ctx = document.getElementById('performanceChart').getContext('2d');
+    const performanceChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{
+          label: 'Performance Overtime',
+          data: [70, 75, 80, 85],
+          backgroundColor: 'rgba(76, 175, 201, 0.2)',
+          borderColor: '#4cafc9',
+          borderWidth: 2,
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
